@@ -1,0 +1,36 @@
+=============================================================================================
+Best Practices for Data Management:
+
+- Never modify the source data files (you want to preserve a record of the data as you received it).
+
+- Write a script (e.g. a Python program) to generate your analysis files from the source data files.
+
+- Advantages of this approach: If new source data arrives, the analysis files can be updated using the script. Also, complex data management can be reproduced and is documented through the code in the script.
+
+- Name variables with brief interpretable names.
+
+- Short variable names convey too little meaning, and very long names are awkward to use in complex expressions
+
+- Variable names consisting only of letters (a-z, case sensitive), numbers (not as the first character) and the underscore character (_) will be handled easily by most statistical software.
+
+- Whitespace in variable names is allowed in Python/Pandas, but confuses analysis based on formulas. To avoid this, use (for example) "birth_date" instead of "birth date".
+
+- Most statistical software will treat blank, “NA”, or “.” as a missing value.
+
+=============================================================================================
+Spreadsheet Software:
+
+- Spreadsheet software can be useful for getting a quick overview of a data set, but is quite limited for more advanced data management and analysis.
+
+- Font style and text color in a spreadsheet are generally not interpretable by statistical software so should not be used to encode important information.
+
+- Spreadsheet graphs and charts will generally be ignored when importing spreadsheet data into statistical software.
+
+- Each sheet in a spreadsheet workbook is usually imported as a separate dataset.
+
+- Python can read most Excel files directly, but may struggle with large, complex, or very old files.
+
+- Text/CSV is a better choice than spreadsheet formats (e.g. .xlsx) for data exchange and archiving.
+
+=============================================================================================
+
